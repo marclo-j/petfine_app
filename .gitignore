@@ -1,2 +1,5 @@
 # Playwright MCP artifacts
 .playwright-mcp/
+
+# Graphify (knowledge graph) — local-only artifacts
+graphify-out/cost.json

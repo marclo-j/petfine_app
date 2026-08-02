@@ -1,0 +1,650 @@
+{
+  "communities": {
+    "0": [
+      "app_src_api_repos",
+      "app_src_api_repos_clone",
+      "app_src_api_repos_mockauthrepository",
+      "app_src_api_repos_mockchatrepository",
+      "app_src_api_repos_mockfeedrepository",
+      "app_src_api_repos_mocknotificationrepository",
+      "app_src_api_repos_mockpostrepository",
+      "app_src_api_repos_mockuserrepository",
+      "app_src_api_repositories",
+      "app_src_api_repositories_authrepository",
+      "app_src_api_repositories_authrepository_register",
+      "app_src_api_repositories_authrepository_signinwithemail",
+      "app_src_api_repositories_authrepository_signinwithgoogle",
+      "app_src_api_repositories_authrepository_verifycode",
+      "app_src_api_repositories_chatrepository",
+      "app_src_api_repositories_chatrepository_createconversation",
+      "app_src_api_repositories_chatrepository_getconversations",
+      "app_src_api_repositories_chatrepository_getmessages",
+      "app_src_api_repositories_chatrepository_sendmessage",
+      "app_src_api_repositories_createpostinput",
+      "app_src_api_repositories_feedrepository",
+      "app_src_api_repositories_feedrepository_getfeed",
+      "app_src_api_repositories_feedrepository_getmyposts",
+      "app_src_api_repositories_feedrepository_getpost",
+      "app_src_api_repositories_feedrepository_share",
+      "app_src_api_repositories_feedrepository_togglelike",
+      "app_src_api_repositories_notificationrepository",
+      "app_src_api_repositories_notificationrepository_getnotifications",
+      "app_src_api_repositories_postrepository",
+      "app_src_api_repositories_postrepository_createpost",
+      "app_src_api_repositories_registerinput",
+      "app_src_api_repositories_updateprofileinput",
+      "app_src_api_repositories_userrepository",
+      "app_src_api_repositories_userrepository_getme",
+      "app_src_api_repositories_userrepository_updateprofile",
+      "app_src_mock_data",
+      "app_src_mock_data_avatar_1",
+      "app_src_mock_data_avatar_2",
+      "app_src_mock_data_avatar_profile",
+      "app_src_mock_data_delay",
+      "app_src_mock_data_mockconversations",
+      "app_src_mock_data_mockfeed",
+      "app_src_mock_data_mocklogin",
+      "app_src_mock_data_mockmessages",
+      "app_src_mock_data_mocknotifications",
+      "app_src_mock_data_mockpostdetail",
+      "app_src_mock_data_mockposts",
+      "app_src_mock_data_mockuser",
+      "app_src_mock_data_mockusers",
+      "app_src_mock_data_now",
+      "app_src_store_auth_authstate",
+      "app_src_types_domain",
+      "app_src_types_domain_appnotification",
+      "app_src_types_domain_authorstats",
+      "app_src_types_domain_authsession",
+      "app_src_types_domain_conversation",
+      "app_src_types_domain_message",
+      "app_src_types_domain_messagekind",
+      "app_src_types_domain_notificationkind",
+      "app_src_types_domain_post",
+      "app_src_types_domain_postauthor",
+      "app_src_types_domain_postdetail",
+      "app_src_types_domain_poststatus",
+      "app_src_types_domain_posttype",
+      "app_src_types_domain_user"
+    ],
+    "1": [
+      "app_package_dependencies_expo_image",
+      "app_src_components_chatbubble",
+      "app_src_components_chatbubble_chatbubble",
+      "app_src_components_chatbubble_chatbubbleprops",
+      "app_src_components_photopickergrid",
+      "app_src_components_photopickergrid_photopickergrid",
+      "app_src_components_photopickergrid_photopickergridprops",
+      "app_src_components_segmentedtabs",
+      "app_src_components_segmentedtabs_segmentedtab",
+      "app_src_components_segmentedtabs_segmentedtabs",
+      "app_src_components_segmentedtabs_segmentedtabsprops",
+      "app_src_components_ui_avatar",
+      "app_src_components_ui_avatar_avatar",
+      "app_src_components_ui_avatar_avatarprops",
+      "app_src_components_ui_avatar_avatarsize",
+      "app_src_components_ui_avatar_fallbacktext",
+      "app_src_components_ui_avatar_sizestyles",
+      "app_src_components_ui_emptystate",
+      "app_src_components_ui_emptystate_emptystate",
+      "app_src_components_ui_emptystate_emptystateprops",
+      "app_src_components_ui_pill",
+      "app_src_components_ui_pill_pill",
+      "app_src_components_ui_pill_pillprops",
+      "app_src_components_ui_pill_sizestyles",
+      "app_src_components_ui_pill_textsize",
+      "app_src_components_ui_pill_textstyles",
+      "app_src_components_ui_pill_variantstyles",
+      "app_src_components_ui_screenheader",
+      "app_src_components_ui_screenheader_screenheader",
+      "app_src_components_ui_screenheader_screenheaderprops",
+      "app_src_features_create_post_screens_postformscreen_formfield",
+      "app_src_features_feed_components_postcard",
+      "app_src_features_feed_components_postcard_postactions",
+      "app_src_features_feed_components_postcard_postcard",
+      "app_src_features_feed_components_postcard_postcardprops",
+      "app_src_features_feed_components_postcard_postverb",
+      "app_src_features_notifications_screens_notificationsscreen",
+      "app_src_features_notifications_screens_notificationsscreen_notificationsscreen",
+      "app_src_features_notifications_screens_notificationsscreen_scope",
+      "app_src_features_notifications_screens_notificationsscreen_scopes",
+      "app_src_lib_cn",
+      "app_src_lib_cn_cn",
+      "app_src_lib_format",
+      "app_src_lib_format_formatchattimestamp",
+      "app_src_lib_format_formatcount",
+      "app_src_lib_format_timeago",
+      "app_src_navigation_tabbar",
+      "app_src_navigation_tabbar_tabbar",
+      "app_src_navigation_tabbar_tabbarprops",
+      "app_src_navigation_tabbar_tabs",
+      "expo_image"
+    ],
+    "2": [
+      "app_src_api_repos_getauthrepository",
+      "app_src_components_ui_button",
+      "app_src_components_ui_button_button",
+      "app_src_components_ui_button_buttonprops",
+      "app_src_components_ui_button_buttonsize",
+      "app_src_components_ui_button_buttonvariant",
+      "app_src_components_ui_button_sizestyles",
+      "app_src_components_ui_button_textstyles",
+      "app_src_components_ui_button_variantstyles",
+      "app_src_components_ui_divider",
+      "app_src_components_ui_divider_divider",
+      "app_src_components_ui_textfield",
+      "app_src_components_ui_textfield_textfield",
+      "app_src_components_ui_textfield_textfieldprops",
+      "app_src_features_auth_authnavigator",
+      "app_src_features_auth_authnavigator_stack",
+      "app_src_features_auth_components_authlayout",
+      "app_src_features_auth_components_authlayout_authlayout",
+      "app_src_features_auth_components_authlayout_authlayoutprops",
+      "app_src_features_auth_components_googlebutton_googlebutton",
+      "app_src_features_auth_schemas",
+      "app_src_features_auth_schemas_createpasswordschema",
+      "app_src_features_auth_schemas_createpasswordvalues",
+      "app_src_features_auth_schemas_emailschema",
+      "app_src_features_auth_schemas_passwordschema",
+      "app_src_features_auth_schemas_profiledataschema",
+      "app_src_features_auth_schemas_profiledatavalues",
+      "app_src_features_auth_schemas_signinschema",
+      "app_src_features_auth_schemas_signinvalues",
+      "app_src_features_auth_schemas_verificationcodeschema",
+      "app_src_features_auth_screens_loginscreen",
+      "app_src_features_auth_screens_loginscreen_loginscreen",
+      "app_src_features_auth_screens_loginscreen_props",
+      "app_src_features_auth_screens_passwordscreen",
+      "app_src_features_auth_screens_passwordscreen_passwordscreen",
+      "app_src_features_auth_screens_passwordscreen_props",
+      "app_src_features_auth_screens_profiledatascreen",
+      "app_src_features_auth_screens_profiledatascreen_profiledatascreen",
+      "app_src_features_auth_screens_profiledatascreen_props",
+      "app_src_features_auth_screens_signinscreen",
+      "app_src_features_auth_screens_signinscreen_props",
+      "app_src_features_auth_screens_signinscreen_signinscreen",
+      "app_src_features_auth_screens_verifycodescreen",
+      "app_src_features_auth_screens_verifycodescreen_props",
+      "app_src_features_auth_screens_verifycodescreen_verifycodescreen",
+      "app_src_navigation_types",
+      "app_src_navigation_types_authstackparamlist",
+      "app_src_store_auth",
+      "app_src_store_auth_useauthstore"
+    ],
+    "3": [
+      "app_src_api_hooks",
+      "app_src_api_hooks_querykeys",
+      "app_src_api_hooks_useconversations",
+      "app_src_api_hooks_usecreateconversation",
+      "app_src_api_hooks_usefeed",
+      "app_src_api_hooks_useme",
+      "app_src_api_hooks_usemessages",
+      "app_src_api_hooks_usemyposts",
+      "app_src_api_hooks_usenotifications",
+      "app_src_api_hooks_usepost",
+      "app_src_api_hooks_usesendmessage",
+      "app_src_api_hooks_useshare",
+      "app_src_api_hooks_usetogglelike",
+      "app_src_api_hooks_useupdateprofile",
+      "app_src_api_repos_getchatrepository",
+      "app_src_api_repos_getfeedrepository",
+      "app_src_api_repos_getnotificationrepository",
+      "app_src_api_repos_getuserrepository",
+      "app_src_components_ui_icon",
+      "app_src_components_ui_icon_icon",
+      "app_src_components_ui_icon_iconname",
+      "app_src_components_ui_icon_iconprops",
+      "app_src_components_ui_icon_icons",
+      "app_src_features_auth_components_googlebutton",
+      "app_src_features_auth_components_googlebutton_googlebuttonprops",
+      "app_src_features_chat_screens_chatscreen",
+      "app_src_features_chat_screens_chatscreen_chatscreen",
+      "app_src_features_chat_screens_chatscreen_props",
+      "app_src_features_feed_screens_feedscreen",
+      "app_src_features_feed_screens_feedscreen_feed_tabs",
+      "app_src_features_feed_screens_feedscreen_feedscreen",
+      "app_src_features_feed_screens_feedscreen_feedscreenprops",
+      "app_src_features_main_mainnavigator",
+      "app_src_features_main_mainnavigator_mainnavigator",
+      "app_src_features_main_mainnavigator_mainnavigatorprops",
+      "app_src_features_main_mainnavigator_tab",
+      "app_src_features_profile_screens_profileeditscreen",
+      "app_src_features_profile_screens_profileeditscreen_profileeditscreen",
+      "app_src_features_profile_screens_profileeditscreen_profileformschema",
+      "app_src_features_profile_screens_profileeditscreen_profileformvalues",
+      "app_src_features_profile_screens_profilescreen",
+      "app_src_features_profile_screens_profilescreen_profilescreen",
+      "app_src_features_profile_screens_profilescreen_profilescreenprops",
+      "app_src_navigation_types_maintabparamlist"
+    ],
+    "4": [
+      "app_app_adaptiveicon_backgroundcolor",
+      "app_app_adaptiveicon_backgroundimage",
+      "app_app_adaptiveicon_foregroundimage",
+      "app_app_adaptiveicon_monochromeimage",
+      "app_app_android_adaptiveicon",
+      "app_app_android_predictivebackgestureenabled",
+      "app_app_app",
+      "app_app_expo",
+      "app_app_expo_android",
+      "app_app_expo_icon",
+      "app_app_expo_ios",
+      "app_app_expo_name",
+      "app_app_expo_orientation",
+      "app_app_expo_plugins",
+      "app_app_expo_slug",
+      "app_app_expo_userinterfacestyle",
+      "app_app_expo_version",
+      "app_app_expo_web",
+      "app_app_ios_supportstablet",
+      "app_app_json_app_app",
+      "app_app_queryclient",
+      "app_app_tsx_app_app",
+      "app_app_web_bundler",
+      "app_app_web_favicon",
+      "app_index",
+      "app_package_dependencies_expo_font",
+      "app_package_dependencies_expo_status_bar",
+      "app_src_features_root_rootnavigator_rootnavigator",
+      "expo_font",
+      "expo_status_bar"
+    ],
+    "5": [
+      "app_src_api_hooks_usecreatepost",
+      "app_src_api_repos_getpostrepository",
+      "app_src_features_auth_authnavigator_authnavigator",
+      "app_src_features_create_post_formconfig",
+      "app_src_features_create_post_formconfig_defaultpostformvalues",
+      "app_src_features_create_post_formconfig_post_type_label",
+      "app_src_features_create_post_formconfig_postfieldconfig",
+      "app_src_features_create_post_formconfig_postformconfig",
+      "app_src_features_create_post_formconfig_postformschema",
+      "app_src_features_create_post_formconfig_postformsection",
+      "app_src_features_create_post_formconfig_postformvalues",
+      "app_src_features_create_post_screens_postformscreen",
+      "app_src_features_create_post_screens_postformscreen_postformscreen",
+      "app_src_features_create_post_screens_postformscreen_props",
+      "app_src_features_create_post_screens_posttypescreen",
+      "app_src_features_create_post_screens_posttypescreen_order",
+      "app_src_features_create_post_screens_posttypescreen_posttypescreen",
+      "app_src_features_create_post_screens_posttypescreen_props",
+      "app_src_features_root_rootnavigator",
+      "app_src_features_root_rootnavigator_stack",
+      "app_src_navigation_types_rootstackparamlist",
+      "app_src_types_domain_sex"
+    ],
+    "6": [
+      "app_package",
+      "app_package_devdependencies",
+      "app_package_devdependencies_eslint",
+      "app_package_devdependencies_eslint_config_expo",
+      "app_package_devdependencies_types_react",
+      "app_package_devdependencies_typescript",
+      "app_package_main",
+      "app_package_name",
+      "app_package_private",
+      "app_package_scripts",
+      "app_package_scripts_android",
+      "app_package_scripts_ios",
+      "app_package_scripts_lint",
+      "app_package_scripts_start",
+      "app_package_scripts_web",
+      "app_package_version",
+      "eslint",
+      "eslint_config_expo",
+      "types_react",
+      "typescript"
+    ],
+    "7": [
+      "app_tsconfig",
+      "app_tsconfig_compileroptions",
+      "app_tsconfig_compileroptions_paths",
+      "app_tsconfig_compileroptions_strict",
+      "app_tsconfig_compileroptions_types",
+      "app_tsconfig_extends",
+      "app_tsconfig_include",
+      "ref_expo_tsconfig_base",
+      "ref_global_d_ts",
+      "ref_nativewind_env_d_ts",
+      "ref_nativewind_types",
+      "ref_ts",
+      "ref_tsx"
+    ],
+    "8": [
+      "app_src_api_client",
+      "app_src_api_client_api_base_url",
+      "app_src_api_client_client",
+      "app_src_api_client_use_mock",
+      "app_src_lib_errors",
+      "app_src_lib_errors_apierror",
+      "app_src_lib_errors_apierror_constructor",
+      "app_src_lib_errors_isapierror",
+      "app_src_lib_errors_parseresponse"
+    ],
+    "9": [
+      "app_package_dependencies",
+      "app_package_dependencies_babel_preset_expo",
+      "app_package_dependencies_hookform_resolvers",
+      "app_package_dependencies_react_native_svg",
+      "babel_preset_expo",
+      "hookform_resolvers",
+      "react_native_svg"
+    ],
+    "10": [
+      "app_metro_config",
+      "app_metro_config_config",
+      "app_metro_config_getdefaultconfig",
+      "app_metro_config_withnativewind"
+    ],
+    "11": [
+      "app_src_lib_theme",
+      "app_src_lib_theme_colors",
+      "app_src_lib_theme_radii",
+      "app_src_lib_theme_spacing"
+    ],
+    "12": [
+      "app_eslint_config",
+      "app_eslint_config_defineconfig",
+      "app_eslint_config_expoconfig"
+    ],
+    "13": [
+      "opencode_plugins_graphify",
+      "opencode_plugins_graphify_graphifyplugin",
+      "opencode_plugins_graphify_rationale_4"
+    ],
+    "14": [
+      "app_global_d",
+      "app_global_d_css"
+    ],
+    "15": [
+      "app_nativewind_env_d",
+      "app_nativewind_env_d_rationale_3"
+    ],
+    "16": [
+      "app_package_dependencies_expo",
+      "expo"
+    ],
+    "17": [
+      "app_package_dependencies_expo_blur",
+      "expo_blur"
+    ],
+    "18": [
+      "app_package_dependencies_expo_google_fonts_inter",
+      "expo_google_fonts_inter"
+    ],
+    "19": [
+      "app_package_dependencies_expo_metro_runtime",
+      "expo_metro_runtime"
+    ],
+    "20": [
+      "app_package_dependencies_clsx",
+      "clsx"
+    ],
+    "21": [
+      "app_package_dependencies_nativewind",
+      "nativewind"
+    ],
+    "22": [
+      "app_package_dependencies_react",
+      "react"
+    ],
+    "23": [
+      "app_package_dependencies_react_dom",
+      "react_dom"
+    ],
+    "24": [
+      "app_package_dependencies_react_hook_form",
+      "react_hook_form"
+    ],
+    "25": [
+      "app_package_dependencies_react_native",
+      "react_native"
+    ],
+    "26": [
+      "app_package_dependencies_react_native_reanimated",
+      "react_native_reanimated"
+    ],
+    "27": [
+      "app_package_dependencies_react_native_safe_area_context",
+      "react_native_safe_area_context"
+    ],
+    "28": [
+      "app_package_dependencies_react_native_screens",
+      "react_native_screens"
+    ],
+    "29": [
+      "app_package_dependencies_react_native_web",
+      "react_native_web"
+    ],
+    "30": [
+      "app_package_dependencies_react_native_worklets",
+      "react_native_worklets"
+    ],
+    "31": [
+      "app_package_dependencies_react_navigation_bottom_tabs",
+      "react_navigation_bottom_tabs"
+    ],
+    "32": [
+      "app_package_dependencies_react_navigation_native",
+      "react_navigation_native"
+    ],
+    "33": [
+      "app_package_dependencies_react_navigation_native_stack",
+      "react_navigation_native_stack"
+    ],
+    "34": [
+      "app_package_dependencies_tailwind_merge",
+      "tailwind_merge"
+    ],
+    "35": [
+      "app_package_dependencies_tanstack_react_query",
+      "tanstack_react_query"
+    ],
+    "36": [
+      "app_package_dependencies_zod",
+      "zod"
+    ],
+    "37": [
+      "app_package_dependencies_zustand",
+      "zustand"
+    ],
+    "38": [
+      "app_babel_config"
+    ],
+    "39": [
+      "app_postcss_config"
+    ],
+    "40": [
+      "app_tailwind_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.058173076923076925,
+    "1": 0.06823529411764706,
+    "2": 0.10289115646258504,
+    "3": 0.08985200845665962,
+    "4": 0.07126436781609195,
+    "5": 0.15151515151515152,
+    "6": 0.1,
+    "7": 0.15384615384615385,
+    "8": 0.25,
+    "9": 0.2857142857142857,
+    "10": 0.5,
+    "11": 0.5,
+    "12": 0.6666666666666666,
+    "13": 0.6666666666666666,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_src_lib_cn_cn",
+      "label": "cn()",
+      "degree": 26
+    },
+    {
+      "id": "app_src_store_auth_useauthstore",
+      "label": "useAuthStore",
+      "degree": 13
+    },
+    {
+      "id": "app_app_expo",
+      "label": "expo",
+      "degree": 11
+    },
+    {
+      "id": "app_src_types_domain_posttype",
+      "label": "PostType",
+      "degree": 11
+    },
+    {
+      "id": "app_src_types_domain_post",
+      "label": "Post",
+      "degree": 11
+    },
+    {
+      "id": "app_src_components_ui_button_button",
+      "label": "Button()",
+      "degree": 9
+    },
+    {
+      "id": "app_src_types_domain_authsession",
+      "label": "AuthSession",
+      "degree": 9
+    },
+    {
+      "id": "app_src_api_hooks_useme",
+      "label": "useMe()",
+      "degree": 8
+    },
+    {
+      "id": "app_src_components_ui_icon_icon",
+      "label": "Icon()",
+      "degree": 8
+    },
+    {
+      "id": "app_src_types_domain_user",
+      "label": "User",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ChatBubbleProps",
+      "target": "Message",
+      "source_files": [
+        "app/src/components/ChatBubble.tsx",
+        "app/src/types/domain.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `ChatBubbleProps` unexpectedly reaches hub `Message`"
+    },
+    {
+      "source": "PostCardProps",
+      "target": "Post",
+      "source_files": [
+        "app/src/features/feed/components/PostCard.tsx",
+        "app/src/types/domain.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `PostCardProps` unexpectedly reaches hub `Post`"
+    },
+    {
+      "source": "App()",
+      "target": "useAuthStore",
+      "source_files": [
+        "app/App.tsx",
+        "app/src/store/auth.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "plugins",
+      "target": "expo-image",
+      "source_files": [
+        "app/app.json",
+        "app/package.json"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "extends",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "usePost()",
+      "target": "getFeedRepository()",
+      "source_files": [
+        "app/src/api/hooks.ts",
+        "app/src/api/repos.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `usePost()` unexpectedly reaches hub `getFeedRepository()`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `cn`, `expo`, `package.json`, `expo`, `expo-blur`, `@expo-google-fonts/inter`, `@expo/metro-runtime`, `clsx`, `nativewind`, `react`, `react-dom`, `react-hook-form`, `react-native`, `react-native-reanimated`, `react-native-safe-area-context`, `react-native-screens`, `react-native-web`, `react-native-worklets`, `@react-navigation/bottom-tabs`, `@react-navigation/native`, `@react-navigation/native-stack`, `tailwind-merge`, `@tanstack/react-query`, `zod`, `zustand`?",
+      "why": "High betweenness centrality (0.294) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `expo-image` connect `cn` to `expo`?",
+      "why": "High betweenness centrality (0.256) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `expo-image` connect `cn` to `dependencies`?",
+      "why": "High betweenness centrality (0.195) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `queryClient`, `name`, `slug` to the rest of the system?",
+      "why": "146 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `repos.ts` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.058173076923076925 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `cn` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06823529411764706 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `LoginScreen.tsx` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10289115646258504 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
