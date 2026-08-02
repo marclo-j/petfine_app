@@ -293,5 +293,155 @@
     "mtime": 1785627983.6647708,
     "ast_hash": "2f1127f2675a8471c90f591c4913cc07",
     "semantic_hash": "2f1127f2675a8471c90f591c4913cc07"
+  },
+  "Documentation/FABLE-PROTOCOL.md": {
+    "mtime": 1783719106.3397026,
+    "ast_hash": "b8b7131cdb120d0f50629b36b9d500d4",
+    "semantic_hash": ""
+  },
+  "Documentation/decisiones_pactadas.md": {
+    "mtime": 1785436106.413496,
+    "ast_hash": "3827fe5af2a2df8b1067d45cdfa1ba49",
+    "semantic_hash": ""
+  },
+  "Documentation/petfine_diagramas_flujo.md": {
+    "mtime": 1785436415.2929783,
+    "ast_hash": "0f6918581c803e1923f5d80857551dac",
+    "semantic_hash": ""
+  },
+  "Documentation/producto_mvp.md": {
+    "mtime": 1785435995.994947,
+    "ast_hash": "451b6bef2ecaba0f01b006e68d55582d",
+    "semantic_hash": ""
+  },
+  "Documentation/requerimientos_mvp_v3.md": {
+    "mtime": 1785435798.370381,
+    "ast_hash": "b5dcf2f2c612daa5b2b5f56328b20cb5",
+    "semantic_hash": ""
+  },
+  "Documentation/stack_tecnologico.md": {
+    "mtime": 1785436237.6398404,
+    "ast_hash": "2304c0c479693ca5f5ee6f5e5e94c52f",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785629953.257266,
+    "ast_hash": "85612fa63480837e34bd82877e449289",
+    "semantic_hash": ""
+  },
+  "app/AGENTS.md": {
+    "mtime": 1785625512.398121,
+    "ast_hash": "963888ec05f17b13375386f058dd621e",
+    "semantic_hash": ""
+  },
+  "app/CLAUDE.md": {
+    "mtime": 1785625512.398121,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": ""
+  },
+  "app/assets/android-icon-background.png": {
+    "mtime": 1785625512.3030028,
+    "ast_hash": "2d65569cc0e2afdcea0af9f9902d4173",
+    "semantic_hash": ""
+  },
+  "app/assets/android-icon-foreground.png": {
+    "mtime": 1785625512.3062406,
+    "ast_hash": "72e71a9c846c6aa4ae32476641a00e18",
+    "semantic_hash": ""
+  },
+  "app/assets/android-icon-monochrome.png": {
+    "mtime": 1785625512.308266,
+    "ast_hash": "1e097dab989759fc0b69440092ca22cd",
+    "semantic_hash": ""
+  },
+  "app/assets/favicon.png": {
+    "mtime": 1785625512.3102734,
+    "ast_hash": "d9f444efbdfbe7931aa93beada07318a",
+    "semantic_hash": ""
+  },
+  "app/assets/icon.png": {
+    "mtime": 1785625512.316334,
+    "ast_hash": "cb975bba2216ce10a60e6c0ffe9941a2",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/chat.svg": {
+    "mtime": 1785625760.5712955,
+    "ast_hash": "3aa3a65d99de070ddc6d46391baff339",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/chevron-left.svg": {
+    "mtime": 1785625760.583069,
+    "ast_hash": "5d58dc19a131b698691943956a9e8507",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/comments.svg": {
+    "mtime": 1785625760.583069,
+    "ast_hash": "f44bf4a70d6d010b5709ac3caec54519",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/heart.svg": {
+    "mtime": 1785625760.6184258,
+    "ast_hash": "824754ab9efe641c504529da0f9c36ed",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/image.svg": {
+    "mtime": 1785625760.567284,
+    "ast_hash": "6aa6231caa90915ffd2b0e9ecd7e7a84",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/logo.svg": {
+    "mtime": 1785625760.6164198,
+    "ast_hash": "b145005dabac2ee753f45a658dcf8274",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/more.svg": {
+    "mtime": 1785625760.595959,
+    "ast_hash": "c14be8dd4cb4bdbfc83aa6731b6db4ea",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/repost.svg": {
+    "mtime": 1785625760.6184258,
+    "ast_hash": "9e2143185901302ea556eaf8969c580d",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/tab-bell.svg": {
+    "mtime": 1785625760.2665598,
+    "ast_hash": "ed9e06ae41d7c542fe5fa765540badaa",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/tab-create.svg": {
+    "mtime": 1785625760.2665598,
+    "ast_hash": "44941ae3260dc932569033caf96220b5",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/tab-home.svg": {
+    "mtime": 1785625760.2665598,
+    "ast_hash": "537fdca3aa477f228e6104404aeff3bb",
+    "semantic_hash": ""
+  },
+  "app/assets/icons/tab-vets.svg": {
+    "mtime": 1785625943.715274,
+    "ast_hash": "ddea7d20b2b5a988a25cc0657beecc26",
+    "semantic_hash": ""
+  },
+  "app/assets/splash-icon.png": {
+    "mtime": 1785625512.3582015,
+    "ast_hash": "97dae5a0e62ad8551d8a31897b425e63",
+    "semantic_hash": ""
+  },
+  "app/src/assets/icons/avatar-1.png": {
+    "mtime": 1785625758.5739188,
+    "ast_hash": "b4aad68d9acaa2a3df2a4879422768e1",
+    "semantic_hash": ""
+  },
+  "app/src/assets/icons/avatar-2.png": {
+    "mtime": 1785625758.846153,
+    "ast_hash": "b4aad68d9acaa2a3df2a4879422768e1",
+    "semantic_hash": ""
+  },
+  "app/src/assets/icons/avatar-profile.png": {
+    "mtime": 1785625758.5739188,
+    "ast_hash": "b4aad68d9acaa2a3df2a4879422768e1",
+    "semantic_hash": ""
   }
 }
