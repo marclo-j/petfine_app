@@ -18,11 +18,17 @@ const AVATAR_2 = require('@/assets/icons/avatar-2.png');
 const AVATAR_PROFILE = require('@/assets/icons/avatar-profile.png');
 
 export const mockUser: User = {
-  id: 'u-maria',
-  name: 'María',
+  id: 'u-joaquin',
+  name: 'Joaquín',
   avatarUrl: AVATAR_PROFILE,
   whatsapp: '+51999000111',
   bio: 'Amo 💗 y rescato a perritos de la calle.',
+};
+
+/** Credenciales de acceso manual mientras no exista la base de datos real. */
+export const mockCredentials = {
+  email: 'joaquin@gmail.com',
+  password: '12345',
 };
 
 export const mockUsers: User[] = [
@@ -126,7 +132,7 @@ export const mockMessages: Message[] = [
   {
     id: 'm-1',
     conversationId: 'c-1',
-    senderId: 'u-maria',
+    senderId: 'u-joaquin',
     content: 'Hola, ¿sigue con usted el perrito?',
     photoUrl: null,
     isAuto: false,
@@ -144,7 +150,7 @@ export const mockMessages: Message[] = [
   {
     id: 'm-3',
     conversationId: 'c-1',
-    senderId: 'u-maria',
+    senderId: 'u-joaquin',
     content: 'Perfecto, ¿en qué zona lo encontró?',
     photoUrl: null,
     isAuto: false,
@@ -211,8 +217,8 @@ export function delay<T>(data: T, ms = 300): Promise<T> {
 }
 
 /** Simula autenticación y devuelve la sesión del usuario mock. */
-export function mockLogin(email: string): AuthSession {
-  return { user: { ...mockUser, name: email.split('@')[0] || mockUser.name }, token: 'mock-token' };
+export function mockLogin(): AuthSession {
+  return { user: { ...mockUser }, token: 'mock-token' };
 }
 
 /** Filtra posts por tipo, con los posts de seguidos primero (feed ponderado). */

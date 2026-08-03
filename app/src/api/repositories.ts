@@ -23,7 +23,7 @@ export interface RegisterInput {
 }
 
 export interface AuthRepository {
-  signInWithEmail(email: string): Promise<AuthSession>;
+  signInWithEmail(email: string, password: string): Promise<AuthSession>;
   signInWithGoogle(): Promise<AuthSession>;
   verifyCode(email: string, code: string): Promise<AuthSession>;
   register(input: RegisterInput): Promise<AuthSession>;

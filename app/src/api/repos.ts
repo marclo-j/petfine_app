@@ -7,6 +7,7 @@ import type {
 import {
   delay,
   mockConversations,
+  mockCredentials,
   mockFeed,
   mockLogin,
   mockMessages,
@@ -31,20 +32,33 @@ import type {
  * Copia los datos para que las mutaciones no contaminen el mock global.
  */
 
-const clone = <T,>(value: T): T => structuredClone(value);
+/**
+ * Copia profunda de los datos mock. structuredClone falla en web con los
+ * ImageSource de require() (tienen métodos), así que se degrada a JSON.
+ */
+const clone = <T,>(value: T): T => {
+  try {
+    return structuredClone(value);
+  } catch {
+    return JSON.parse(JSON.stringify(value)) as T;
+  }
+};
 
 export const mockAuthRepository: AuthRepository = {
-  async signInWithEmail(email) {
-    return delay(mockLogin(email));
+  async signInWithEmail(email, password) {
+    if (email !== mockCredentials.email || password !== mockCredentials.password) {
+      throw new Error('Correo o contraseña incorrectos');
+    }
+    return delay(mockLogin());
   },
   async signInWithGoogle() {
-    return delay(mockLogin('maria@gmail.com'));
+    return delay(mockLogin());
   },
   async verifyCode(email, _code) {
-    return delay(mockLogin(email));
+    return delay(mockLogin());
   },
   async register(input) {
-    return delay(mockLogin(input.email));
+    return delay(mockLogin());
   },
 };
 

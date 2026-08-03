@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Text, View } from 'react-native';
 import type { AuthStackParamList } from '@/navigation/types';
@@ -17,15 +18,24 @@ type Props = NativeStackScreenProps<AuthStackParamList, 'Login'>;
 /** Login: "Iniciar sesión" — email + contraseña, o Google. */
 export function LoginScreen({ navigation }: Props) {
   const signIn = useAuthStore((s) => s.signIn);
+  const [loginError, setLoginError] = useState<string | null>(null);
   const {
     control,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<SignInValues>({ resolver: zodResolver(signInSchema) });
+  } = useForm<SignInValues>({
+    resolver: zodResolver(signInSchema),
+    defaultValues: { email: '', password: '' },
+  });
 
-  const onSubmit = handleSubmit(async ({ email }) => {
-    const session = await getAuthRepository().signInWithEmail(email);
-    signIn(session);
+  const onSubmit = handleSubmit(async ({ email, password }) => {
+    try {
+      setLoginError(null);
+      const session = await getAuthRepository().signInWithEmail(email, password);
+      signIn(session);
+    } catch (e) {
+      setLoginError(e instanceof Error ? e.message : 'No se pudo iniciar sesión');
+    }
   });
 
   const onGoogle = async () => {
@@ -62,7 +72,24 @@ export function LoginScreen({ navigation }: Props) {
             />
           )}
         />
-        <TextField label="Contraseña" placeholder="•••••••••••" secureTextEntry />
+        <Controller
+          control={control}
+          name="password"
+          render={({ field: { onChange, onBlur, value } }) => (
+            <TextField
+              label="Contraseña"
+              placeholder="•••••••••••"
+              secureTextEntry
+              value={value}
+              onBlur={onBlur}
+              onChangeText={onChange}
+              error={errors.password?.message}
+            />
+          )}
+        />
+        {loginError ? (
+          <Text className="font-inter text-xs text-red-400">{loginError}</Text>
+        ) : null}
         <Button label="Iniciar sesión" loading={isSubmitting} onPress={onSubmit} />
       </View>
 

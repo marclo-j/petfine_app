@@ -19,7 +19,12 @@ export const verificationCodeSchema = z
   .string({ message: 'Ingresa el código' })
   .min(4, { message: 'Código muy corto' });
 
-export const signInSchema = z.object({ email: emailSchema });
+export const signInSchema = z.object({
+  email: emailSchema,
+  password: z
+    .string({ message: 'Ingresa tu contraseña' })
+    .min(1, { message: 'Ingresa tu contraseña' }),
+});
 export const createPasswordSchema = z
   .object({
     password: passwordSchema,
