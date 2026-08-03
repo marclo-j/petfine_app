@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { ActivityIndicator, FlatList, Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '@/navigation/types';
 import { useNotifications } from '@/api/hooks';
 import { timeAgo } from '@/lib/format';
 import { Avatar } from '@/components/ui/Avatar';
 import { Pill } from '@/components/ui/Pill';
+import { Icon } from '@/components/ui/Icon';
 
 type Scope = 'general' | 'mine';
 
@@ -13,15 +16,25 @@ const SCOPES: { value: Scope; label: string }[] = [
   { value: 'mine', label: 'Mis publicaciones' },
 ];
 
+type Props = NativeStackScreenProps<RootStackParamList, 'Notifications'>;
+
 /** Notificaciones — diseño #17:360: header naranja, pills de scope, cells 72px. */
-export function NotificationsScreen() {
+export function NotificationsScreen({ navigation }: Props) {
   const [scope, setScope] = useState<Scope>('general');
   const { data, isLoading, isError, refetch } = useNotifications(scope);
 
   return (
     <SafeAreaView className="flex-1 bg-surface" edges={['top']}>
-      <View className="px-4 py-3">
-        <Text className="font-inter-semibold text-xl tracking-[-0.02em] text-primary">
+      <View className="h-14 flex-row items-center border-b border-lineLight px-4">
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Volver"
+          onPress={() => navigation.goBack()}
+          className="mr-2 h-10 w-10 items-center justify-center"
+        >
+          <Icon name="chevronLeft" size={24} />
+        </Pressable>
+        <Text className="flex-1 font-inter-semibold text-xl tracking-[-0.02em] text-primary">
           Actividad
         </Text>
       </View>

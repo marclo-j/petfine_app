@@ -12,7 +12,6 @@ export type AuthStackParamList = {
 
 export type MainTabParamList = {
   Feed: undefined;
-  Notifications: undefined;
   Profile: undefined;
 };
 
@@ -23,4 +22,5 @@ export type RootStackParamList = {
   CreatePostForm: { tipo: PostType };
   ProfileEdit: undefined;
   Chat: { conversationId: string };
+  Notifications: undefined;
 };

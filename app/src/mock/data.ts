@@ -17,6 +17,10 @@ const AVATAR_1 = require('@/assets/icons/avatar-1.png');
 const AVATAR_2 = require('@/assets/icons/avatar-2.png');
 const AVATAR_PROFILE = require('@/assets/icons/avatar-profile.png');
 
+/** Fotos reales de perros para emular el carrusel de publicaciones. */
+const CARRUSEL_1 = require('@/assets/carrusel/1.jpeg');
+const CARRUSEL_2 = require('@/assets/carrusel/2.jpeg');
+const CARRUSEL_3 = require('@/assets/carrusel/3.jpg');
 export const mockUser: User = {
   id: 'u-joaquin',
   name: 'Joaquín',
@@ -49,7 +53,7 @@ export const mockPosts: Post[] = [
     titulo: 'Perro encontrado en San Carlos',
     descripcion:
       'Encontré este perro en San Carlos, Comas. No tiene collar.\nSexo: Macho.\nUbicación: San Carlos, Comas.\nColor/marcas: Blanco con manchas marrones. No tiene cola.\nEstado físico: Tiene una herida en la pata.\nTemperamento observado: Está asustado y con hambre.',
-    fotos: [AVATAR_1, AVATAR_2],
+    fotos: [CARRUSEL_1, CARRUSEL_2, CARRUSEL_3],
     distrito: 'Comas',
     calle: 'San Carlos',
     detalle: {
@@ -71,7 +75,7 @@ export const mockPosts: Post[] = [
     status: 'activo',
     titulo: 'Perrito en la avenida principal',
     descripcion: 'Encontré este perro en San Carlos, Comas.',
-    fotos: [AVATAR_2],
+    fotos: [CARRUSEL_1, CARRUSEL_2, CARRUSEL_3],
     distrito: 'Comas',
     calle: 'Av. Principal',
     author: mockUsers[1],

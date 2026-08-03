@@ -7,7 +7,7 @@ import { cn } from '@/lib/cn';
 const tabs = [
   { key: 'Feed', icon: 'home', label: 'Inicio' },
   { key: 'Create', icon: 'create', label: 'Publicar' },
-  { key: 'Notifications', icon: 'bell', label: 'Avisos' },
+  { key: 'Chat', icon: 'chat', label: 'Mensajes' },
   { key: 'Vets', icon: 'vets', label: 'Veterinarias' },
   { key: 'Profile', icon: null, label: 'Perfil' },
 ] as const;
@@ -60,7 +60,7 @@ export function TabBar({ activeTab, avatarUri, onNavigate }: TabBarProps) {
               className="w-[75px] items-center justify-center py-3"
             >
               <Icon
-                name={tab.icon as 'home' | 'create' | 'bell' | 'vets'}
+                name={tab.icon as 'home' | 'create' | 'chat' | 'vets'}
                 size={tab.key === 'Vets' ? 40 : 24}
                 color={active ? '#F99139' : '#000000'}
               />

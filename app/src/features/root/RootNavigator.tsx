@@ -6,6 +6,7 @@ import { PostTypeScreen } from '@/features/create-post/screens/PostTypeScreen';
 import { PostFormScreen } from '@/features/create-post/screens/PostFormScreen';
 import { ProfileEditScreen } from '@/features/profile/screens/ProfileEditScreen';
 import { ChatScreen } from '@/features/chat/screens/ChatScreen';
+import { NotificationsScreen } from '@/features/notifications/screens/NotificationsScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -21,6 +22,7 @@ export function RootNavigator({ isSignedIn }: { isSignedIn: boolean }) {
                 {...props}
                 onCreatePost={() => props.navigation.navigate('CreatePost')}
                 onOpenChat={() => props.navigation.navigate('Chat', { conversationId: 'c-1' })}
+                onOpenNotifications={() => props.navigation.navigate('Notifications')}
                 onOpenSettings={() => props.navigation.navigate('ProfileEdit')}
               />
             )}
@@ -29,6 +31,7 @@ export function RootNavigator({ isSignedIn }: { isSignedIn: boolean }) {
           <Stack.Screen name="CreatePostForm" component={PostFormScreen} />
           <Stack.Screen name="ProfileEdit" component={ProfileEditScreen} />
           <Stack.Screen name="Chat" component={ChatScreen} />
+          <Stack.Screen name="Notifications" component={NotificationsScreen} />
         </>
       ) : (
         <Stack.Screen name="Auth" component={AuthNavigator} />

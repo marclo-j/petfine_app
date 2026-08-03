@@ -14,28 +14,30 @@ const FEED_TABS: { value: PostType; label: string }[] = [
 ];
 
 export interface FeedScreenProps {
-  onOpenChat: () => void;
+  onOpenNotifications: () => void;
 }
 
-/** Feed principal — diseño #1:1608: tabs de texto + lista de posts + acceso a chat. */
-export function FeedScreen({ onOpenChat }: FeedScreenProps) {
+/** Feed principal — diseño #1:1608: tabs de texto + notificaciones + lista de posts. */
+export function FeedScreen({ onOpenNotifications }: FeedScreenProps) {
   const [tipo, setTipo] = useState<PostType>('encontrado');
   const { data, isLoading, isError, refetch } = useFeed(tipo);
 
   return (
     <SafeAreaView className="flex-1 bg-surface" edges={['top']}>
-      <View className="py-2.5">
-        <SegmentedTabs tabs={FEED_TABS} value={tipo} onChange={setTipo} />
-      </View>
+      <View className="py-5">
+        <View className="relative">
+          <SegmentedTabs tabs={FEED_TABS} value={tipo} onChange={setTipo} />
 
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel="Abrir chat"
-        onPress={onOpenChat}
-        className="absolute right-[15px] top-11 h-10 w-10 items-center justify-center"
-      >
-        <Icon name="chat" size={40} />
-      </Pressable>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Abrir notificaciones"
+            onPress={onOpenNotifications}
+            className="absolute right-[15px] top-1/2 h-10 w-10 -translate-y-1/2 items-center justify-center"
+          >
+            <Icon name="bell" size={24} />
+          </Pressable>
+        </View>
+      </View>
 
       {isLoading ? (
         <ActivityIndicator className="mt-10" color="#F99139" />

@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Image } from 'expo-image';
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
+import type { NativeScrollEvent, NativeSyntheticEvent } from 'react-native';
 import type { Post } from '@/types/domain';
 import { formatCount, timeAgo } from '@/lib/format';
+import { cn } from '@/lib/cn';
 import { Avatar } from '@/components/ui/Avatar';
 import { Icon } from '@/components/ui/Icon';
 import { Pill } from '@/components/ui/Pill';
@@ -33,9 +36,63 @@ export interface PostCardProps {
 }
 
 /**
+ * Carrusel de fotos del post — estilo Instagram: swipe horizontal con
+ * paginación e indicadores (dots). Con una sola foto renderiza la imagen simple.
+ */
+function PhotoCarousel({ fotos }: { fotos: string[] }) {
+  const [width, setWidth] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const onScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    if (width > 0) setActiveIndex(Math.round(e.nativeEvent.contentOffset.x / width));
+  };
+
+  return (
+    <View
+      className="mt-3 overflow-hidden rounded"
+      onLayout={(e) => setWidth(e.nativeEvent.layout.width)}
+    >
+      {width > 0 ? (
+        <ScrollView
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+          onScroll={onScroll}
+          scrollEventThrottle={16}
+        >
+          {fotos.map((foto, index) => (
+            <Image
+              key={index}
+              source={foto}
+              contentFit="cover"
+              style={{ width, aspectRatio: 1 }}
+              accessibilityLabel={`Foto ${index + 1} del post`}
+            />
+          ))}
+        </ScrollView>
+      ) : null}
+
+      {fotos.length > 1 ? (
+        <View className="absolute bottom-2.5 left-0 right-0 flex-row items-center justify-center gap-1.5">
+          {fotos.map((_, index) => (
+            <View
+              key={index}
+              className={cn(
+                'h-1.5 rounded-full',
+                index === activeIndex ? 'w-4 bg-white' : 'w-1.5 bg-white/60',
+              )}
+            />
+          ))}
+        </View>
+      ) : null}
+    </View>
+  );
+}
+
+/**
  * Card de post del feed — estructura del Figma (#15:198): avatar + nombre +
- * verbo + tiempo + menú, foto 299×299 (radius 4), descripción, contadores
- * con iconos (patitas/compartidos/comentarios) y botones por tipo.
+ * verbo + tiempo + menú, carrusel de fotos 1:1 (radius 4), descripción,
+ * contadores con iconos (patitas/compartidos) y botones por tipo.
  */
 export function PostCard({ post, onPress, onAction, onMore, className }: PostCardProps) {
   return (
@@ -52,12 +109,7 @@ export function PostCard({ post, onPress, onAction, onMore, className }: PostCar
         {onMore ? <Icon name="more" size={24} /> : null}
       </View>
 
-      <Image
-        source={post.fotos[0]}
-        contentFit="cover"
-        className="mt-3 aspect-square w-full rounded"
-        accessibilityLabel="Foto del post"
-      />
+      <PhotoCarousel fotos={post.fotos} />
 
       <View className="gap-2">
         <Text className="font-inter text-xs leading-snug text-ink">{post.descripcion}</Text>
@@ -73,12 +125,6 @@ export function PostCard({ post, onPress, onAction, onMore, className }: PostCar
             <Icon name="repost" size={16} />
             <Text className="font-inter-medium text-[10px] text-ink">
               {formatCount(post.sharesCount, 'compartidos')}
-            </Text>
-          </View>
-          <View className="flex-row items-center gap-1">
-            <Icon name="comments" size={16} />
-            <Text className="font-inter-medium text-[10px] text-ink">
-              {formatCount(post.commentsCount, 'comentarios')}
             </Text>
           </View>
         </View>
